@@ -61,14 +61,14 @@ def train(opt):
         batch_size=opt.batch_size, 
         shuffle=True, 
         drop_last=False, 
-        num_workers=-1 
+        num_workers=2
     )
     testing_generator = DataLoader(
         testing_set, 
         batch_size=opt.batch_size,
         shuffle=False,
         drop_last=False,
-        num_workers=-1
+        num_workers=2
     )
     # if os.path.isdir(PROJECT_DIR / opt.log_path): 
     #     shutil.rmtree(PROJECT_DIR / opt.log_path) 
