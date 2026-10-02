@@ -38,7 +38,7 @@ def get_args():
     return parser.parse_args()
 
 def train(opt): 
-    mlflow.set_tracking_uri(uri=(PROJECT_DIR / "mlruns").as_uri()) 
+    mlflow.set_tracking_uri(os.environ.get("MLFLOW_TRACKING_URI", "sqlite:///mlflow.db")) 
     mlflow.set_experiment("cats_dogs_classification") 
     # args = get_args() 
     if torch.cuda.is_available(): 
