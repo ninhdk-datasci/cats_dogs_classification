@@ -209,6 +209,10 @@ def train(opt):
                     artifact_path=f"checkpoints"
                 )
 
+if __name__ == "__main__": 
+    args = get_args() 
+    train(args)
+
             
 
 
