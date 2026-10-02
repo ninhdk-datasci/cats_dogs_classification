@@ -189,7 +189,7 @@ def train(opt):
             }
 
              # create a new log directory for TensorBoard logs 
-            log_dir = PROJECT_DIR / opt/log_path 
+            log_dir = PROJECT_DIR / opt.log_path 
             log_dir.mkdir(parents=True, exist_ok=True)
 
             last_checkpoint_path = PROJECT_DIR / opt.trained_model_path / f"epoch_{epoch}.pth"
