@@ -132,7 +132,7 @@ def train(opt):
                 writer.add_scalar("Train/Accuracy", accuracy, epoch * num_iters + iter)  
                 writer.add_scalar("Train/Loss", loss.item(), epoch * num_iters + iter)
 
-                mlflow.log_metric(
+                mlflow.log_metrics(
                     {
                         "Train/Accuracy": accuracy, 
                         "Train/Loss": loss.item() 
@@ -164,7 +164,7 @@ def train(opt):
                     writer.add_scalar("Test/Accuracy", accuracy_val, epoch * num_iters_test + iter)
                     writer.add_scalar("Test/Loss", loss_val.item(), epoch * num_iters_test + iter)
 
-                    mlflow.log_metric(
+                    mlflow.log_metrics(
                         {
                             "Test/Accuracy": accuracy_val, 
                             "Test/Loss": loss_val.item()
